@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Academic Dashboard</title>
+    <meta name="description" content="Student Semester Details Web Application - Track academic performance">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Main Dashboard -->
+        <div id="dashboard" class="page active">
+            <div class="container">
+                <div class="header">
+                    <h1>Student Academic Dashboard</h1>
+                    <p>Track your semester-wise academic performance</p>
+                </div>
+
+                <!-- Student Profile -->
+                <div class="student-profile">
+                    <div class="profile-content">
+                        <div class="profile-avatar">
+                            <img id="profile-photo" src="https://via.placeholder.com/96" alt="Student Photo">
+                        </div>
+                        <div class="profile-info">
+                            <h1 id="student-name">Pittala Madar Vali</h1>
+                            <div class="profile-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <div>
+                                        <p>Roll Number</p>
+                                        <strong id="roll-number">23X51A3275</strong>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-user"></i>
+                                    <div>
+                                        <p>Branch</p>
+                                        <strong id="branch">CSE - Data Science</strong>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <div>
+                                        <p>Year</p>
+                                        <strong id="year">3rd Year</strong>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-award"></i>
+                                    <div>
+                                        <p>Current CGPA</p>
+                                        <strong id="cgpa" class="cgpa">9.0</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Semester Cards -->
+                <div class="semester-section">
+                    <h2>Semester Performance</h2>
+                    <div class="semester-grid" id="semester-grid">
+                        <!-- Semester cards will be generated here -->
+                    </div>
+                </div>
+
+                <!-- Excellence Section -->
+                <div class="excellence-section">
+                    <h3>Academic Excellence</h3>
+                    <p>Keep up the great work! Your consistent performance shows dedication to learning.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Semester Details Page -->
+        <div id="semester-details" class="page">
+            <div class="container">
+                <div class="back-section">
+                    <button class="back-btn" onclick="showDashboard()">
+                        <i class="fas fa-arrow-left"></i> Back to Home
+                    </button>
+                    
+                    <div class="student-info-card">
+                        <h2 id="detail-student-name">Pittala Madar Vali</h2>
+                        <p><span id="detail-roll-number">23X51A3275</span> • <span id="detail-branch">CSE - Data Science</span></p>
+                    </div>
+                </div>
+
+                <!-- Subject Table -->
+                <div class="subject-table-container" id="subject-table-container">
+                    <!-- Table will be generated here -->
+                </div>
+
+                <!-- Incomplete Semester Message -->
+                <div class="incomplete-semester" id="incomplete-semester" style="display: none;">
+                    <div class="incomplete-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h1 id="incomplete-title">Semester - Not Completed Yet</h1>
+                    <p>This semester is still in progress or hasn't started yet. Subject details and marks will be available once the semester is completed.</p>
+                    <div class="coming-soon">
+                        <div class="coming-soon-icon">
+                            <i class="fas fa-book-open"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <p>Marks and subject details will be updated here after completion</p>
+                    </div>
+                    <button class="back-btn" onclick="showDashboard()">
+                        <i class="fas fa-arrow-left"></i> Back to Dashboard
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
